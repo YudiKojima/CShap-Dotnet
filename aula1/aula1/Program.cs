@@ -8,6 +8,7 @@ class MainClass
         int Number1, Number2;
         string Name, Operation, WantedProject, NumberTransport, ContinueOrNot = "1";
         string GoToTop;
+        string[] DaysOfWeekToTravel = new string[4] {"Monday", "Tuesday", "Friday", "Saturday"};
         TypeOfTransport Transport = 0;
 
         Console.WriteLine("Type your name:");
@@ -21,10 +22,12 @@ class MainClass
             Console.WriteLine("Which project do you want to try?");
             Console.WriteLine("1 - Mathematical operation");
             Console.WriteLine("2 - Enum project");
+            Console.WriteLine("3 - Array project");
             WantedProject = Console.ReadLine();
 
             if (WantedProject == "1")
             {
+                Console.Clear();
                 Console.WriteLine("Enter first number:");
                 Number1 = int.Parse(Console.ReadLine());
                 Console.WriteLine("Enter second number:");
@@ -55,12 +58,10 @@ class MainClass
                         Console.WriteLine("Operation number invalid");
                         break;
                 }
-
-                Console.WriteLine("1 - Continue");
-                Console.WriteLine("0 - Exit");
-                ContinueOrNot = Console.ReadLine();
+                break;
+            } else if(WantedProject == "2")
+            {
                 Console.Clear();
-            } else {
                 Console.WriteLine("Choose the type of trasnport:");
                 Console.WriteLine("1 - Car");
                 Console.WriteLine("2 - Bus");
@@ -92,6 +93,7 @@ class MainClass
                         break;
                 }
 
+                Console.WriteLine("\n");
                 Console.WriteLine("Transport chosen was: " + Transport);
                 if(Transport == TypeOfTransport.Car)
                 {
@@ -109,11 +111,20 @@ class MainClass
                     Console.WriteLine("Waiting time is: 240 minutes");
                 }
                 break;
+            } else 
+            {
+                Console.Clear();
+                Console.WriteLine("Day available for travel: ");
+                for(int i = 0; i < DaysOfWeekToTravel.Length; i++)
+                {
+                    Console.WriteLine(DaysOfWeekToTravel[i]);
+                }
+                break;
             }
-        } 
+        }
 
+        Console.WriteLine("\n");
         Console.WriteLine("Completed operation!");
-        Console.Clear();
 
         Console.WriteLine("Want to go back to the beginning?");
         Console.WriteLine("[Y] - YES");
@@ -122,6 +133,7 @@ class MainClass
 
         if( GoToTop.ToLower() != "y")
         {
+            Console.Clear();
             Console.WriteLine("See you later!");
         } else
         {

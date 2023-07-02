@@ -1,0 +1,8 @@
+C:\Users\marco\OneDrive\Documentos\Programação\DotNet\C#\aula1\aula1\bin\Debug\aula1.exe.config
+C:\Users\marco\OneDrive\Documentos\Programação\DotNet\C#\aula1\aula1\bin\Debug\aula1.exe
+C:\Users\marco\OneDrive\Documentos\Programação\DotNet\C#\aula1\aula1\bin\Debug\aula1.pdb
+C:\Users\marco\OneDrive\Documentos\Programação\DotNet\C#\aula1\aula1\obj\Debug\aula1.csproj.AssemblyReference.cache
+C:\Users\marco\OneDrive\Documentos\Programação\DotNet\C#\aula1\aula1\obj\Debug\aula1.csproj.SuggestedBindingRedirects.cache
+C:\Users\marco\OneDrive\Documentos\Programação\DotNet\C#\aula1\aula1\obj\Debug\aula1.csproj.CoreCompileInputs.cache
+C:\Users\marco\OneDrive\Documentos\Programação\DotNet\C#\aula1\aula1\obj\Debug\aula1.exe
+C:\Users\marco\OneDrive\Documentos\Programação\DotNet\C#\aula1\aula1\obj\Debug\aula1.pdb

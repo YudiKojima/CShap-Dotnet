@@ -7,11 +7,14 @@ class MainClass
     {
         int Number1, Number2;
         string Name, Operation, WantedProject, NumberTransport, ContinueOrNot = "1";
+        string GoToTop;
         TypeOfTransport Transport = 0;
 
         Console.WriteLine("Type your name:");
         Name = Console.ReadLine();
         Console.WriteLine("Hello, " + Name);
+
+        initial:
 
         while (ContinueOrNot == "1")
         {
@@ -110,6 +113,20 @@ class MainClass
         } 
 
         Console.WriteLine("Completed operation!");
+        Console.Clear();
+
+        Console.WriteLine("Want to go back to the beginning?");
+        Console.WriteLine("[Y] - YES");
+        Console.WriteLine("[N] - NO");
+        GoToTop = Console.ReadLine();
+
+        if( GoToTop.ToLower() != "y")
+        {
+            Console.WriteLine("See you later!");
+        } else
+        {
+            goto initial;
+        }
 
         Console.ReadLine();
     }

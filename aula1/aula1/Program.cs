@@ -2,12 +2,12 @@
 
 class MainClass
 {
-    enum DayWeek {Sunday, Monday, Tuesday, Wednesday, Thursday, Friday, Satuday };
+    enum TypeOfTransport {Car, Bus, Motobike, Plane, Boat};
     public static void Main()
     {
         int Number1, Number2;
-        string Name, Operation, WantedProject, ContinueOrNot = "1";
-        DayOfWeek DayOfWeek = DayOfWeek.Friday;
+        string Name, Operation, WantedProject, NumberTransport, ContinueOrNot = "1";
+        TypeOfTransport Transport = 0;
 
         Console.WriteLine("Type your name:");
         Name = Console.ReadLine();
@@ -58,7 +58,53 @@ class MainClass
                 ContinueOrNot = Console.ReadLine();
                 Console.Clear();
             } else {
-                Console.WriteLine("Today is " + DayOfWeek);
+                Console.WriteLine("Choose the type of trasnport:");
+                Console.WriteLine("1 - Car");
+                Console.WriteLine("2 - Bus");
+                Console.WriteLine("3 - Motorbike");
+                Console.WriteLine("4 - Plane");
+                Console.WriteLine("5 - Boat");
+                NumberTransport = Console.ReadLine();
+                Console.Clear();
+
+                switch (NumberTransport)
+                {
+                    case ("1"):
+                        Transport = TypeOfTransport.Car;
+                        break;
+                    case ("2"):
+                        Transport = TypeOfTransport.Bus;
+                        break;
+                    case ("3"):
+                        Transport = TypeOfTransport.Motobike;
+                        break;
+                    case ("4"):
+                        Transport = TypeOfTransport.Plane;
+                        break;
+                    case ("5"):
+                        Transport = TypeOfTransport.Boat;
+                        break;
+                    default:
+                        Console.WriteLine("Operation number invalid");
+                        break;
+                }
+
+                Console.WriteLine("Transport chosen was: " + Transport);
+                if(Transport == TypeOfTransport.Car)
+                {
+                    Console.WriteLine("Waiting time is: 60 minutes");
+                } else if(Transport == TypeOfTransport.Bus)
+                {
+                    Console.WriteLine("Waiting time is: 120 minutes");
+                } else if(Transport == TypeOfTransport.Motobike){
+                    Console.WriteLine("Waiting time is: 30 minutes");
+                } else if (Transport == TypeOfTransport.Plane)
+                {
+                    Console.WriteLine("Waiting time is: 20 minutes");
+                } else
+                {
+                    Console.WriteLine("Waiting time is: 240 minutes");
+                }
                 break;
             }
         } 
